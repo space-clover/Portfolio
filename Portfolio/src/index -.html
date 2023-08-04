@@ -1,0 +1,747 @@
+<!DOCTYPE html>   
+<html lang="es">
+<head>               <!--Colocar antes de cambiar elementos del config-->  
+    <meta charset="UTF-8">  <!--- "npx tailwindcss -i ./src/main.css -o ./dist/output.css --watch" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAFOLIo??</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://kit.fontawesome.com/fbef9f7590.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class=" bg-color1 m-0 w-vw-100 lg:w-full overflow-auto ">
+    <header class="bg-color2 flex relative flex-col pt-0.5 px-1 items-left home">
+        <nav class=" w-full border border-color1 py-1 px-2 text-right sm:hidden overflow-auto">
+        </nav>
+        <nav class="w-full border border-color1 hidden sm:block ">
+            <ul class="w-4/6 text-color1 font-bold text-xl  flex ml-10 justify-between">
+                <li class="p-2 about-me-li">
+                    <a href="#" class="relative group border-color1 border-dashed hover:border-b-4">ABOUT ME 
+                        <div class=" w-96 flex items-center break-words text-color2 absolute ml-2 p-1 bg-color1 opacity-0 transition duration-700 ease-in-out group-hover:opacity-100 group-hover:translate-y-2 about-me">
+                            <div class="flex flex-col border-4 border-color2 items-center  p-2"> 
+                                <img src="./IMG/WhatsApp Image 2023-07-12 at 6.07.21 PM (1).jpeg" alt="photo_autor " class="rounded-full w-50% h-50%">
+                            <h1 class="text-justify text-sm italic">Hello, my name is jefry :) , I am a newbie front end designer and programmer, 
+                                welcome to my repository if the theme is not to your liking in the header there is a 
+                                settings section with other themes.
+                                you can disable this message by pressing any other place on the screen.</h1>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="p-2" onclick="skillscroll()"  ><a class="cursor-pointer">SKILLS</a></li>
+                <li class="p-2" onclick="hobbiescroll()"><a  class=" cursor-pointer">HOBBIES</a></li>
+                <li class="p-2" onclick="formationscroll()"><a class="cursor-pointer">FORMATION</a></li>
+                <li class="p-2" onclick="proyectscroll()"><a  class="cursor-pointer">PROYECTS</a></li>
+                <li class="p-2"><a onclick="abrirdialogo()" class="cursor-pointer">CONTACT</a></li>
+                <li class="p-2 relative group" >
+                    <i class="fa-solid fa-gear fa-lg transition duration-1000 hover:rotate-180 cursor-pointer settings " onclick="abrirsetts()"></i> 
+                    <div class=" w-80 flex flex-col r break-words text-color2 absolute ml-2 p-1  bg-color1 div_setts hidden opacity-0">
+                        <h1 class="font-bold flex items-center justify-center">THEMES</h1>
+                        <ul class="flex justify-around p-4"> 
+                            <li><i class="fa-solid fa-carrot fa-xl text-black transition duration-200 hover:text-color5 cursor-pointer"></i></li>
+                            <li><i class="fa-solid fa-apple-whole fa-xl text-black transition duration-200 hover:text-color2 cursor-pointer"></i></li>
+                            <li><i class="fa-solid fa-paw fa-xl text-black transition duration-200 hover:text-pink-900 cursor-pointer"></i></li>
+                            <li><i class=" fa-solid fa-seedling fa-xl text-black transition duration-200 hover:text-color8 cursor-pointer" onclick="temamarce()" ></i></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <aside class="border border-color1 w-100-vw pb-1 mt-1 sm:mt-2">
+            <h1 class="sm:text-9xl text-8xl font-bold text-color1  text-center sm:text-left sm:pl-16 pb-6 bg-color2 " >HELLO!</h1>
+            <div class="flex w-full sm:pl-16 sm: text-center  ">
+                <h1 class="text-5xl font-bold text-color1  pb-4 bg-color2">こんにちは！</h1>
+                <h1 class="text-4xl font-bold text-color1  pb-4 bg-color2 self-center ">HERE'S MY PORTFOLIO</h1>
+            </div>
+        </aside>
+    </header>
+    <aside class="  hidden fixed transform translate-x-96 top-1/4 w-full z-50 max-w-sm bg-color1 border border-gray-200 rounded-lg shadow p-3 about-card">
+        <div class="flex flex-col items-center py-4 border-2 border-color2">
+            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./IMG/WhatsApp Image 2023-07-12 at 6.07.21 PM (1).jpeg" alt="Bonnie image"/>
+            <h5 class="mb-1 text-xl font-medium text-gray-900 ">Jonathan Mejia</h5>
+            <span class="text-sm text-gray-500 ">Front-end programmer</span>
+            <div class=" p-4 flex mt-4 space-x-3 md:mt-6 font-bold text-justify text-color2">
+                <h2 class="text-sm ">Hello! I'm a passionate front-end developer with a strong inclination for designing functional and visually appealing interfaces for users. My journey in the world of web development has been exciting, and currently, I'm immersed in a development program for interfaces at Oracle Next One.<br> <br>
+                    With Oracle certifications in HTML, CSS, and JavaScript, along with skills in Data Science using SQL and Python (Pandas, Matplotlib, and NumPy) from IBM, my multidisciplinary approach enables me to tackle projects comprehensively and with creative solutions.</h2>
+            </div>
+        </div>
+    </aside>
+    <aside>
+        <div class=" lg:hidden  fixed  bottom-0 left-0 z-50 w-vw-100 h-16 bg-color1  border-t-2 border-color2   ">
+            <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+                <button type="button" class="inline-flex flex-col items-center justify-center px-5" onclick="home()">
+                    <i class="fa-solid fa-house fa-xl text-color2 p-3 "></i>
+                    <span class="text-sm text-gray-500  ">Home</span>
+                </button>
+                <button type="button" class="inline-flex flex-col items-center justify-center px-5" onclick="about_mecard()">
+                    <i class="fa-regular fa-user fa-xl text-color2 p-3 "></i>
+                    <span class="text-sm text-gray-500 ">Me</span>
+                </button>
+                <button type="button" class="inline-flex flex-col items-center justify-center px-5">
+                    <i class="fa-solid fa-sliders fa-xl text-color2 p-3 "></i>
+                    <span class="text-sm text-gray-500 ">Settings</span>
+                </button>
+                <button type="button" class="inline-flex flex-col items-center justify-center px-5  " onclick="mobilecon()">
+                    <i class="fa-solid fa-user fa-xl text-color2 p-3"></i>
+                    <span class="text-sm text-gray-500  ">Contact</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <aside class="bg-color1">
+        <div class=" lg:hidden  bg-color1 fixed hidden transform translate-x-96 top-0 bottom-0 left-0 z-40  px-4 pt-64 overflow-y-auto  bg-white w-vw-100  h-vh-95 contact" >
+            <h5 id="drawer-label" class="inline-flex items-center mb-3 text-base font-bold text-color2 uppercase ">
+                <i class="fa-regular fa-envelope fa-xl text-color2 mr-2 font-bold "></i> Contact me</h5>
+            
+            <form action="#" class="mb-4">
+            <div class="mb-4">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Name</label>
+                <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:border-blue-500 block w-full p-2.5" placeholder="" required>
+            </div>
+            <div class="mb-4">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " placeholder="name@company.com" required>
+            </div>
+            <div class="mb-4">
+                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 ">Subject</label>
+                <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Let us know how we can help you" required>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">Your message</label>
+                <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder="Your message..."></textarea>
+            </div>
+                <button type="submit" class="text-color1 bg-color2 w-full   font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2  ">Send message</button>
+            </form>
+            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                <a href="#" class="hover:underline">jefry.jonathan.quintanilla@gmail.com</a>
+            </p>
+            <i class="fa-brands fa-linkedin inline-block fa-xl text-blue-800"></i>  <i class="fa-brands fa-github fa-xl inline-block"></i>
+        </div>
+    </aside>
+
+
+    <aside id="miDialogo" class=" fixed bg-color6  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-2 rounded-xl text-center hidden z-20">
+        
+        <div class=" bg-color6 flex flex-col justify-around items-center border-8 p-4 border-black">
+            <i class="fa-solid fa-circle-xmark absolute z-0 left-4 top-4 cursor-pointer" onclick="cerrarDialogo()"></i>
+            <h2 class="py-1 font-extrabold text-5xl">YOU CAN TAKE A LOOK AT MY WORK AT</h2>
+            <div class="flex mt-4">
+                <div class="flex flex-col justify-around">
+                    <a href=""><i class="fa-brands fa-github fa-2xl text-9xl py-1  "></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin fa-2xl text-9xl py-1 "></i></a>
+                </div>
+                <div class="ml-3">
+                    <h2 class="bg-color2 text-2xl text-color1 font-bold px-1">IF YOU WANNA CONTACT ME <br> COMPLETE THE FOLLOWING QUESTIONNAIRE</h2>
+                    <input type="text" placeholder="Name" class="w-full py-1 px-2 bg-white mr-12 mt-2">
+                    <input type="email" placeholder="Email" name="Email" id=""  class="w-full py-1 px-2  mt-1 bg-white mr-12">
+                    <input type="text" placeholder="Affair" class="w-full py-1 px-2  mt-1 bg-white mr-12">
+                    <textarea name="message" placeholder="Message" class="w-full py-2 px-2 mt-1 bg-white mr-12 flex break-words flex-wrap" id="" cols="30" rows="8"></textarea>
+                    
+                </div>
+            </div>
+            <button onclick="cerrarDialogo()" class="w-1/4 h-full py-1 border-none cursor-pointer flex flex-col items-center font-bold "><i class="fa-solid fa-angle-down fa-2xl text-4xl text-color2 transform hover:translate-y-1 p-0"></i> SUBMIT</button>
+        </div>
+    </aside>
+    <aside id="superposicion" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden z-10 backdrop-blur-sm"></aside>
+    <main>
+
+        <section id="presentacion_seccion" class=" border-4 border-color2 mx-0 ">
+            <div class=" text-color2 flex flex-col w-full px-24 pt-2 pb-2">
+                <div class="flex flex-row  justify-center font-bold ">
+                    <h2 class="text-4xl sm:text-5xl mr-1 py-1.5">MY NAME IS </h2>
+                    <h2 class="text-4xl sm:text-5xl text-left pl-2  border-2 border-color2 px-1 py-1"> JEFRY JONATHAN MEJIA</h2> 
+                </div>  
+                <div>
+                    <nav>
+                        <ul class="flex justify-center w-full pt-2">
+                            <li id="github-icon" class="px-3" ><a href=""><i class="fa-brands fa-github-alt fa-2xl text-color2 transition duration-500 ease-in-out hover:text-black transform hover:translate-y-0.5"></i></a></li>
+                            <li id="linkedin-icon" class="px-3"><a href=""><i class="fa-brands fa-linkedin fa-2xl text-color2 transition duration-500 ease-in-out hover:text-blue-800 transform hover:translate-y-0.5" ></i></a></li>
+                            <li id="curriculum-icon" class="px-3"><a href=""><i class="fa-solid fa-paperclip fa-2xl text-color2 transition duration-500 ease-in-out hover:text-gray-500 transform hover:translate-y-0.5"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>      
+
+        <section id="skills_seccion" class="  flex flex-col sm:flex-row border-4 border-color2 w-full text-color4 mt-4 px-2 sm:pl-24 py-2 sm:py-6 items-center skills_scroll">
+            <div class="sm:hidden  w-full sm:w-2/6 bg-color2 sm:ml-12 p-2 sm:mr-16">
+                <h1 class="break-words text-color1 text-2xl border-2 border-color1 p-4 sm:p-6 text-center font-bold">I HAVE SOME SKILLS AS AN:<br> ヨー ポセオ エスタス ハビリダデス <i class=" sm:hidden fa-solid fa-circle-right fa-lg text-color1 " onclick="carrousel()"></i></h1>
+            </div>
+            <i class="hidden sm:block fa-solid fa-circle-right fa-2xl text-color2 duration-500 mr-1 transform hover:text-color5 cursor-pointer" onclick="carrousel()"></i>
+            
+            <ul class="w-full sm:w-3/5 mt-4 sm:mt-0 pr-14 border-r-4 border-dashed border-color2 list-none overflow-hidden relative skills_screen_1  ">
+                
+                <li class=" flex flex-col w-full transition duration-1000 ease-in-out ">
+                    <div class="flex  items-center bg-color2 w-full pb-1">
+                        <div class=" flex justify-center w-50% border-2 border-color1 transform transition duration-500 hover:bg-color1 group "><i class="fa-brands fa-html5 fa-2xl text-9xl text-color1 transition duration-500 ease-in-out transform group-hover:text-color5 hover:"></i></div>
+                        <div class=" flex justify-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class="fa-brands fa-square-js fa-2xl text-9xl text-color1 transition duration-500 ease-in-out transform group-hover:text-yellow-400"></i></div>
+                    </div>
+                    <div id="skill-mod" class="flex justify-around w-full mt-1">
+                        <div class="text-xl border-2 border-color2 w-full text-center text-color2 font-semibold p-1"><h1>STRUCTURE HTML</h1></div>
+                        <div class="text-xl border-2 border-color2  w-full  text-center text-color2 font-semibold p-1"><h1>LOGIC JAVASCRIPT</h1></div>
+                    </div>
+                </li>    
+
+                
+                <li class=" flex flex-col w-full mt-2 transition duration-1000 ease-in-out  ">
+                    <div class="flex justify-around bg-color2 w-full pb-1">
+                        <div class=" flex justify-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class="fa-brands fa-css3-alt fa-2xl text-9xl text-color1 transition duration-500 ease-in-out transform group-hover:text-blue-500"></i></div>
+                        <div class="flex justify-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class="p-3 fa-solid fa-ghost fa-2xl text-8xl text-color1  transition duration-500 ease-in-out transform group-hover:text-gray-400"></i></div>
+                    </div>
+                    <div class="flex justify-around w-full mt-1">
+                        <div class="text-xl border-2 border-color2 w-full text-center text-color2 font-semibold p-1"><h1>DESIGN CSS</h1></div>
+                        <div class="text-xl border-2 border-color2  w-full  text-center text-color2 font-semibold p-1"><h1>CREATIVE DESIGN</h1></div>
+                    </div>
+                </li>  
+
+                <li class=" flex flex-col w-full mt-2 transition duration-1000 ease-in-out  ">
+                    <div class="flex justify-around bg-color2 w-full pb-1">
+                        <div class="flex justify-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class="p-3 fa-solid fa-wind fa-2xl text-8xl text-color1 transition duration-500 ease-in-out transform group-hover:text-blue-300"></i></div>
+                        <div class="flex justify-center items-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class="p-3 fa-solid fa-swatchbook fa-2xl text-8xl text-color1 transition duration-500 ease-in-out transform group-hover:text-color7"></i></div>
+                    </div>
+                    <div class="flex justify-around w-full mt-1">
+                        <div class="text-xl border-2 border-color2 w-full text-center text-color2 font-semibold p-1"><h1>DESIGN TAILWIND</h1></div>
+                        <div class="text-xl border-2 border-color2 w-full  text-center text-color2 font-semibold p-1"><h1>DESIGN UX</h1></div>
+                    </div>
+                </li> 
+            </ul>
+
+            <ul class="w-full sm:w-3/5  mt-4 sm:mt-0 pr-14 border-r-4 border-dashed border-color2 list-none overflow-hidden relative skills_screen_2 hidden ">
+                
+                <li class=" flex flex-col w-full transition duration-1000 ease-in-out opacity-0  ">
+                    <div class="flex   items-center bg-color2 w-full pb-1">
+                        <div class=" flex justify-center w-50% border-2 border-color1 transform transition duration-500 hover:bg-color1 group "><i class="fa-brands fa-figma fa-2xl text-9xl text-color1 py-1 transition duration-500 ease-in-out transform group-hover:text-purple-400 hover:"></i></div>
+                        <div class=" flex justify-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class="fa-brands fa-git-alt fa-2xl text-9xl text-color1 py-1 transition duration-500 ease-in-out transform group-hover:text-color5"></i></div>
+                    </div>
+                    <div id="skill-mod" class="flex justify-around w-full mt-1">
+                        <div class="text-xl border-2 border-color2 w-full text-center text-color2 font-semibold p-1"><h1>FIGMA DESIGN</h1></div>
+                        <div class="text-xl border-2 border-color2  w-full  text-center text-color2 font-semibold p-1"><h1>GIT</h1></div>
+                    </div>
+                </li>    
+
+                
+                <li class=" flex flex-col w-full mt-2 transition duration-1000 ease-in-out opacity-0   ">
+                    <div class="flex justify-around bg-color2 w-full pb-1">
+                        <div class=" flex justify-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class="fa-solid fa-chart-pie fa-2xl text-9xl text-color1 py-1 transition duration-500 ease-in-out transform group-hover:text-red-800"></i></div>
+                        <div class=" flex justify-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class="fa-solid fa-cube fa-2xl text-9xl text-color1 py-1 transition duration-500 ease-in-out transform group-hover:text-blue-700"></i></div>
+                    </div>
+                    <div class="flex justify-around w-full mt-1">
+                        <div class="text-xl border-2 border-color2 w-full text-center text-color2 font-semibold p-1"><h1>MATPLOTLIB</h1></div>
+                        <div class="text-xl border-2 border-color2  w-full  text-center text-color2 font-semibold p-1"><h1>NUMPY</h1></div>
+                    </div>
+                </li>  
+
+                <li class=" flex flex-col w-full mt-2 transition duration-1000 ease-in-out opacity-0  ">
+                    <div class="flex justify-around items-center bg-color2 w-full pb-1">
+                        <div class=" flex justify-center items-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class="fa-brands fa-python fa-2xl text-9xl text-color1 py-1 transition duration-500 ease-in-out transform group-hover:text-blue-700"></i></div>
+                        <div class="flex justify-center items-center w-50% border-2 boder-color1 transform transition duration-500 hover:bg-color1 group "><i class=" fa-brands fa-python fa-2xl text-9xl text-color1 py-1 transition duration-500 ease-in-out transform group-hover:text-yellow-600"></i></div>
+                    </div>
+                    <div class="flex justify-around w-full mt-1">
+                        <div class="text-xl border-2 border-color2 w-full text-center text-color2 font-semibold p-1"><h1> LOGIC PYTHON</h1></div>
+                        <div class="text-xl border-2 border-color2 w-full  text-center text-color2 font-semibold p-1"><h1>PANDAS PYTHON</h1></div>
+                    </div>
+                </li> 
+            </ul>
+            <div class="text-5xl w-2/6 bg-color2 ml-12 p-2 mr-16">
+                <h1 class="hidden sm:block break-words text-color1 border-2 border-color1 p-6 text-center font-bold">I HAVE SOME SKILLS AS AN:<br> <br> <br><br><br>ヨー ポセオ エスタス ハビリダデス</h1>
+            </div>
+        </section>
+        <section id="message_section" class="w-full mt-4 flex justify-center">
+            <div class="w-full border-t-4 border-b-4 border-l-2 border-r-2 border-color2 p-1.5">
+                <div class="border-2 border-color2 p-4">
+                    <div class="border-t-8 border-color2 py-2 sm:p-4 flex justify-center items-center text-center">
+                        <h1 class="hidden sm:block border-b-4 border-dashed border-color2 mr-4 mt-4 text-7xl text-color2 font-bold">言葉</h1>
+                        <div class="bg-color2 p-1 w-full sm:w-2/3">
+                            <div class="border-2 border-color1 p-0.5 ">
+                                <div class="border-2 border-color1 p-1 text-color1 text-xl sm:text-5xl font-bold text-center">
+                                    <h1>ON A PROFESSIONAL PLAN </h1>
+                                    <h1 class="text-color1  text-xl sm:text-3xl font-extralight text-center">IF I SHOULD DESCRIBE MYSELF IN 3 WORDS</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="hidden sm:block border-b-4 border-dashed border-color2 ml-4 mt-4 text-7xl text-color2 font-bold">言葉</h1>
+                    </div>
+                    <div class="border-t-2 border-r-2 border-b-8 border-l-8 border-color2 p-2 shadow ">
+                        <div class="flex flex-col sm:flex-row justify-around border-2 border-color2 text-4xl text-color2 border-dashed p-8 ">
+                                <h2 class=" flex items-center "> AMBITIOUS</h2>
+                                <h2 class=" ">PASSIONATE</h2>
+                                <h2 class="">RIGOROUS</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="languaje" class="w-full bg-color2 p-2 mt-4">
+            <div class="flex flex-row flex-wrap relative text-5xl text-color1 text-left font-bold border-2 border-color1 p-10 ">
+                <h2 class="mr-1 py-1.5 break-words">ALSO, I'M  </h2>
+                <h2 class="text-left pl-2  border-2 border-color1 px-1 mt-1 ">FLUENT</h2>
+                <h2 class="text-left pl-2 mt-2 ">IN ENGLISH SO DON'T WORRY </h2>
+                <h2 class="text-left pt-2 border-b-4 border-dashed">I'LL BE FINE!</h2>
+                <img src="./IMG/icons8-estados-unidos-100.png" alt="USA_FLAG:icons8" class="absolute top-36 left-1/2 transform -translate-y-1/2 translate-x-52 rotate-12 ">
+            </div>  
+        </section> 
+
+        <div class=" mt-4 flex justify-center">
+            <p class="w-2/5 border-t-4 border-color2 border-dashed"></p> <h3 class="w-1/4 sm:w-20  text-center"><i class="fa-solid fa-down-long text-color2 fa-2xl"></i> <i class="fa-solid fa-down-long text-color2 fa-2xl"></i>  <i class="fa-solid fa-2xl fa-down-long text-color2"></i> </h3><p class="w-3/6 border-t-4 border-color2 border-dashed"></p>
+        </div>
+        <section class="sm:mt-12 mt-6 sm:px-10 px-2 text-color2 proyects_scroll">
+            <div class="flex flex-col sm:flex-row justify-between w-full  ">
+                <div class="flex flex-col border-4 border-color2  w-full sm:w-2/5 p-2 mb-2 sm:mb-0 sm:mx-4">
+                    <div class="flex flex-col h-100% border-2 border-dashed border-color2 px-5 py-8 ">
+                        <h2 class="text-2xl mb-4 font-extrabold  ">Web Clima</h2>
+                        <h3 class="text-sm text-justify font-bold">Desarrollé un proyecto web que utiliza la API de OpenWeatherMap para mostrar
+                            información en tiempo real sobre el clima de diferentes ubicaciones.<br><br> La página web proporciona pronósticos climáticos detallados, 
+                            incluyendo temperatura, descripción del clima y iconos visuales representativos.<br> Además, implementé una función de búsqueda que permite 
+                            a los usuarios obtener el clima de una ubicación específica.</h3>
+                        <div class="flex mt-auto justify-end items-end">
+                            <i class="fa-brands fa-github fa-2xl  transition duration-500 hover:text-black mr-4 "></i>
+                            <i class="fa-solid fa-arrow-right-to-bracket fa-2xl transition duration-500 hover:text-black"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col border-4 border-color2 w-full sm:w-2/5 p-2 mb-2 sm:mb-0 sm:mx-4">
+                    <div class=" flex flex-col h-100% border-2 border-dashed border-color2 px-5 py-8 ">
+                        <h2 class="text-2xl mb-4 font-extrabold">Encriptador de texto </h2>
+                        <h3 class="text-sm text-justify font-bold pb-4">Desarrollé una página web interactiva que funciona como un encriptador de texto.
+                            La interfaz de la página permite a los usuarios ingresar texto en un campo de entrada. El programa ofrece dos opciones: 
+                            'Encriptar' y 'Desencriptar'. <br><br> Al hacer clic en el botón 'Encriptar', el programa toma el texto ingresado y lo encripta utilizando un algoritmo específico. Del mismo modo, al hacer clic en el botón 'Desencriptar', el programa revierte el proceso y muestra el texto original.
+                        </h3>
+                        <div class="flex mt-auto justify-end items-end">
+                            <i class="fa-brands fa-github fa-2xl  transition duration-500 hover:text-black mr-4 "></i>
+                            <i class="fa-solid fa-arrow-right-to-bracket fa-2xl transition duration-500 hover:text-black"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class=" border-4 border-color2 w-full sm:w-2/5 p-2 mb-2 sm:mb-0 sm:mx-4">
+                    <div class=" flex flex-col h-100% border-2 border-dashed border-color2 px-5 py-8 ">
+                        <h2 class="text-2xl mb-4 font-extrabold">Alura Geek</h2>
+                        <h3 class="text-sm text-justify font-bold">
+                            Our website has a modern and easy-to-use interface. From the home page, users can browse a variety of featured 
+                            articles and latest news to keep up with the hottest trends in the geek world. <br><br> With a responsive design, the page adapts 
+                            perfectly to any device, allowing a smooth shopping experience from computers, tablets or mobile phones.</h3>
+                        <div class="flex mt-auto justify-end items-end">
+                            <i class="fa-brands fa-github fa-2xl  transition duration-500 hover:text-black mr-4 "></i>
+                            <i class="fa-solid fa-arrow-right-to-bracket fa-2xl transition duration-500 hover:text-black"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="py-4 w-full flex flex-row">
+            <div class="w-1/3 flex flex-col justify-center h-auto border-t-2 border-b-2 border-color2 py-2">
+                <div class="border-t-2 border-b-2 border-r-8 border-color2 p-2"></div>
+            </div>
+            <div class="sm:w-1/3 w-2/3 border-4 border-color2">
+                <h1 class=" text-center text-xl  sm:text-4xl font-bold text-color2 ">FORMATION</h1>
+            </div>
+            <div class="w-1/3 flex flex-col justify-center h-auto border-t-2 border-b-2 border-color2 py-2" >
+                <div class="border-t-2 border-b-2 border-l-8 border-color2 p-2"></div>
+            </div>
+        </div>
+
+        <section id="FORMATION" class="flex flex-col border-2 border-color2 p-1.5 bg-color1 z-50  formation_scroll">
+            <div class=" flex sm:flex-row flex-col border-r-2 border-t-2 border-l-2 border-color2  p-2 mb-1  ">
+                <ul class="flex justify items-center justify-center sm:w-1/2 formation_image sm:border-l-0 sm:border-b-0 border-l-2 border-b-2 border-r-2 border-dashed border-color2 bg-color1 z-10">
+                    <li class="Alura_IMG "> <img src="./IMG/image_8.png" alt=""></li>
+                    <li class="hidden IBM_IMG opacity-0"> <img src="./IMG/icons8-ibm-250.svg" alt=""></li>
+                    <li class="hidden UDB_IMG opacity-0"> <img src="./IMG/universidad-don-bosco-logo-9E96EE334E-seeklogo.com.png" alt=""></li>
+                </ul>
+                <ul class="sm:w-1/2 text-color2 font-bold px-2 h-100% sm:h-80 flex items-center bg-color1 z-20 text-justify">
+                    <li class="Alura_text z-0 ">
+                        <h1>I am delighted to share my enriching experience with the transformative "Alura Next One" program, where I delved into the cutting-edge world of technology and innovation.
+                            <br><br>
+                            Throughout the program, Alura's forward-thinking curriculum provided me with a comprehensive understanding of the latest trends, tools, and technologies in the industry. With industry-leading experts as instructors, I gained theoretical knowledge and hands-on experience, honing my skills to tackle real-world scenarios.
+                            <br><br>
+                            Currently specializing in front-end development with technologies such as react, js, html/css.
+                        </h1>
+                    </li>
+                    <li class="hidden IBM_text opacity-0">
+                        <h1>
+                            I have obtained the Professional Certificate in Advanced Data Analysis from IBM, after successfully completing 8 specialized courses in various areas of data analysis. 
+                            <br><br>
+                            During this process, I have gained a solid understanding of the fundamental principles of data analysis and have worked hands-on with a variety of tools and technologies, including Excel, SQL, relational databases, Python, Jupyter Notebooks, and Cognos Analytics.
+                            <br><br>
+                            In addition, I have developed strong skills in reporting and communicating data analysis findings, which enables me to effectively and persuasively share the results of my research with colleagues and superiors. These competencies have prepared me to successfully fill an entry-level role in the field of data analytics.
+                        </h1>
+                    </li>
+                    <li class="hidden UDB_text opacity-0">
+                        <h1>
+                            Biomedical Engineering Technician, an exciting career that combines my engineering skills with my interest in health sciences. During this training process, I gained a solid understanding of electronics, mechanics, computing, and anatomy, which has given me a deep understanding of the operation of medical equipment and technological devices used in healthcare settings.   
+                        </h1>
+                    </li>
+                </ul>  
+            </div>
+            <div class="border-t-4 border-b-2 border-color2 flex items-center w-full  p-3"> 
+                <i class="text-center w-1/2 fa-solid fa-play fa-2xl text-color2 cursor-pointer transition duration-500 hover:text-color5 " onclick="formationplay()" ></i>
+                <h1 class=" w-1/2 text-xl font-bold text-color2"> YOU CAN SEE MY CERTIFICATES BELOW  </h1> 
+            </div>
+            <ul class="flex p-4 justify-around items-center text-3xl font-bold text-color2">
+                <li><h1>UDB</h1></li>
+                <li><h1>IBM</h1></li>
+                <li><h1>ALURA</h1></li>
+            </ul>
+        </section>
+
+        <section id="HOBBIES" class=" mt-6 bg-color2 p-1.5 hobbies">
+            <div class=" w-full flex  border-4 border-color1 p-4">
+                <div class="sm:w-4/5 w-full sm:ml-4 ">
+                    <h1 class="hidden sm:block text-8xl text-color1 mb-4 font-bold py-5">私の趣味は</h1>
+                    <div class="border-2 border-color1 p-0.5 bg-color2 ">
+                        <ul class="flex flex-col justify-left border-2 border-color2 bg-color1 py-8 px-4">
+                            <h1 class=" text-5xl sm:text-7xl text-color2 mb-4 font-bold">MY HOBBIES</h1>
+                            <li>
+                                <h2 class="sm:text-2xl text-xl  font-bold text-color2 pl-4 pb-1 group"> WEB DEVELOPMENT <i class="fa-solid fa-pager fa-lg text-color2 transition duration-300 ease-in-out group-hover:text-gray-700" ></i></h2>
+                            </li>
+                            <li>
+                                <h2 class="sm:text-2xl text-xl  font-bold text-color2 pl-4 pb-1 group">INTERFACE DESIGN<i class="fa-solid fa-object-group fa-lg text-color2 transition duration-300 ease-in-out group-hover:text-black"></i></h2>
+                            </li>
+                            <li>
+                                <h2 class="sm:text-2xl text-xl  font-bold text-color2 pl-4 pb-1 group">READ MANGA <i class="fa-solid fa-book-journal-whills fa-md text-color2 transition duration-300 ease-in-out group-hover:text-blue-800"></i></h2>
+                            </li>
+                            <li>
+                                <h2 class="sm:text-2xl text-xl  font-bold text-color2 pl-4 pb-1 group">CONTRIBUTE TO OPEN SOURCE PROJECTS <i class="fa-solid fa-code fa-lg text-color2 transition duration-300 ease-in-out group-hover:text-green-900"></i></h2>
+                            </li>
+                            <li>
+                                <h2 class="sm:text-2xl text-xl  font-bold text-color2 pl-4 pb-1 group">DRAWING <i class="fa-solid fa-pencil fa-md text-color2 transition duration-300 ease-in-out group-hover:text-yellow-500"></i></h2>
+                            </li>
+                            <li>
+                                <h2 class="sm:text-2xl text-xl font-bold text-color2 pl-4 pb-1 group">DRAWING <i class="fa-solid fa-pencil fa-md text-color2 transition duration-300 ease-in-out group-hover:text-yellow-500"></i></h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden sm:block w-2/5 pl-4 mt-40">
+                    <ul >
+                        <li class="flex flex-row justify-around pb-2">
+                            <div class=" "> <img src="./IMG/icons8-web-100.png" alt="web_Icon"></div>
+                            <div class=" "><img src="./IMG/icons8-web-100 (2).png" alt="web_desing_icon"></div>
+                        </li>
+                        <li class="flex flex-row justify-around pb-2 ">
+                            <div><img src="./IMG/icons8-manga-96.png" alt="manga_icon"></div>
+                            <div><img src="./IMG/icons8-código-100.png" alt="code_icon"></div>
+                        </li>
+                        <li class="flex flex-row justify-around pb-2">
+                            <div><img src="./IMG/icons8-drawing-100.png" alt=""></div>
+                            <div> <img src="./IMG/icons8-drawing-100.png" alt=""></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" hidden sm:block w-full py-2 ">
+        <div class="py-2 px-3 border-8 border-color2 ">
+            <p class=" text-center text-8xl font-bold text-color2 ">THANKS FOR READING!</p>
+        </div>
+            <p class="text-right text-xl font-medium text-color2 mr-4 py-1 ">JONATHAN MEJIA</p>
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const about_me = document.querySelector('.about-me');
+        const about_me_li = document.querySelector('.about-me-li');
+
+        about_me_li.addEventListener('click', (event) => {
+            event.stopPropagation(); 
+            about_me.classList.remove('hidden');
+        });
+
+        document.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target !== about_me_li && target !== about_me) {
+                about_me.classList.add('hidden');
+            }
+        });
+
+
+    });
+
+    function abrirdialogo() {
+    const dialogo = document.getElementById("miDialogo");
+    const superposicion = document.getElementById("superposicion");
+    dialogo.classList.remove("hidden");
+    superposicion.classList.remove("hidden");
+}
+
+function cerrarDialogo() {
+    const dialogo = document.getElementById("miDialogo");
+    const superposicion = document.getElementById("superposicion");
+    dialogo.classList.add("hidden");
+    superposicion.classList.add("hidden");
+}
+
+
+function mobilecon(){
+    const contactmob = document.querySelector('.contact')
+    const duration = 700;
+    
+    if(contactmob.classList.contains("hidden")){
+    setTimeout(() => {
+        contactmob.classList.remove('hidden')
+    setTimeout(() => {
+        contactmob.style.transition = `transform ${duration}ms ease-in-out`;
+        contactmob.style.transform = `translateX(0px)`;
+    }, 30);
+}, 20);
+}
+    else{
+    setTimeout(() => {
+        contactmob.style.transition = `transform ${duration}ms ease-in-out`;
+        contactmob.style.transform = `translateX(400px)`;
+    setTimeout(() => {
+        contactmob.classList.add('hidden')
+    }, 700);
+}, 20);  
+}
+}
+function about_mecard(){
+    const about = document.querySelector('.about-card')
+    const duration = 700;
+    
+    if(about.classList.contains("hidden")){
+    setTimeout(() => {
+        about.classList.remove('hidden')
+    setTimeout(() => {
+        about.style.transition = `transform ${duration}ms ease-in-out`;
+        about.style.transform = `translateX(0px)`;
+    }, 30);
+}, 20);
+}
+    else{
+    setTimeout(() => {
+        about.style.transition = `transform ${duration}ms ease-in-out`;
+        about.style.transform = `translateX(400px)`;
+    setTimeout(() => {
+        about.classList.add('hidden')
+    }, 700);
+}, 20);  
+}
+}
+function home(){
+    home_div = document.querySelector('.home')
+    home_div.scrollIntoView({ behavior: "smooth" });
+    console.log("a")
+}
+function skillscroll(){
+    scroll_skill = document.querySelector('.skills_scroll')
+    scroll_skill.scrollIntoView({ behavior: "smooth" });
+    
+}
+function hobbiescroll(){
+    scroll_hobbies = document.querySelector('.hobbies')
+    scroll_hobbies.scrollIntoView({ behavior: "smooth" });
+    
+}
+function formationscroll(){
+    scroll_formation = document.querySelector('.formation_scroll')
+    scroll_formation.scrollIntoView({ behavior: "smooth" });
+    
+}
+function proyectscroll(){
+    scroll_proyect = document.querySelector('.proyects_scroll')
+    scroll_proyect.scrollIntoView({ behavior: "smooth" });
+}
+
+
+
+function carrousel() {
+    const pantalla1 = document.querySelector('.skills_screen_1');
+    const pantalla2 = document.querySelector('.skills_screen_2');
+    const elementosLi1 = pantalla1.querySelectorAll('li');
+    const elementosLi2 = pantalla2.querySelectorAll('li');
+    const duration = 700;
+if (!pantalla1.classList.contains('hidden')) {
+    elementosLi2.forEach((li, index) => {
+      li.style.transform = `translateX(${(index + 1) * 0}px)`;
+    });
+setTimeout(() => {
+    console.log("primera")
+    elementosLi1.forEach((li, index) => {
+    li.style.transition = `transform ${duration}ms ease-in-out`;
+    li.style.transform = `translateX(${(index + 1) * 800}px)`;
+    });
+setTimeout(() => {
+    console.log("segunda")
+    pantalla1.classList.add('hidden');
+    pantalla2.classList.remove('hidden');
+setTimeout(() => {
+    console.log("tercera")
+    elementosLi2.forEach((li) => {
+    li.style.transition = 'opacity 1s';
+    li.style.opacity = '1';
+        });
+    elementosLi1.forEach((li) => {
+    li.style.opacity = '0';
+        });
+    }, 200);
+  }, 500); 
+}, 100);
+} else{
+    
+    elementosLi1.forEach((li, index) => {
+      li.style.transform = `translateX(${(index + 1) * 0}px)`;
+    });
+setTimeout(() => {
+    console.log("primera-x")
+    elementosLi2.forEach((li, index) => {
+    li.style.transition = `transform ${duration}ms ease-in-out`;
+    li.style.transform = `translateX(${(index + 1) * 800}px)`;
+    });
+setTimeout(() => {
+    console.log("segunda-x")
+    pantalla2.classList.add('hidden');
+    pantalla1.classList.remove('hidden');
+setTimeout(() => {
+    console.log("tercera-x")
+    elementosLi1.forEach((li) => {
+    li.style.transition = 'opacity 1s';
+    li.style.opacity = '1';
+        });
+    elementosLi2.forEach((li) => {
+    li.style.opacity = '0';
+        });
+        }, 200); 
+    }, 500);
+}, 100); 
+}
+}
+
+let contador = 0;
+function abrirsetts() {
+    const settings = document.querySelector('.settings');
+    const sett_div = document.querySelector('.div_setts');
+    const duration = 700;
+    contador++
+    if (contador % 2 === 0) {
+        sett_div.style.transition = `transform ${duration}ms ease-in-out, opacity ${duration}ms ease-in-out`;
+        sett_div.style.transform = `translateY(0px)`; 
+        sett_div.style.opacity = 0; 
+    setTimeout(() => {
+        sett_div.classList.add('hidden');
+        }, 800);
+        console.log("Función A");
+    } else {
+    sett_div.classList.remove('hidden');
+    setTimeout(() => {
+        sett_div.style.transition = `transform ${duration}ms ease-in-out, opacity ${duration}ms ease-in-out`;
+        sett_div.style.transform = `translateY(20px)`; 
+        sett_div.style.opacity = 1; 
+        }, 50);
+
+        console.log("Función B");
+    }
+
+}
+function formationplay(){
+    const Alura_IMG = document.querySelector('.Alura_IMG');
+    const IBM_IMG = document.querySelector('.IBM_IMG');
+    const UDB_IMG = document.querySelector('.UDB_IMG');
+    const Alura_text = document.querySelector('.Alura_text');
+    const IBM_text = document.querySelector('.IBM_text');
+    const UDB_text = document.querySelector('.UDB_text');
+    const duration = 700;
+
+    Alura_IMG.style.transition = `transform ${duration}ms ease-in-out`;
+    Alura_IMG.style.transform = `translateX(400px)`;
+    Alura_text.style.transition = `transform ${duration}ms ease-in-out`;
+    Alura_text.style.transform = `oap`;
+
+    if (!Alura_IMG.classList.contains('hidden')) {
+        IBM_IMG.style.transform = `translateX(0px)`;
+    setTimeout(function() {
+        Alura_IMG.style.transition = `transform ${duration}ms ease-in-out`;
+        Alura_IMG.style.transform = `translateX(400px)`;
+        Alura_text.style.transition = `opacity ${duration-600}ms ease-in-out`;
+        Alura_text.style.opacity = 0;
+        
+
+    
+    setTimeout(function() {
+        Alura_IMG.style.opacity = 0;
+        Alura_IMG.classList.add("hidden")
+        Alura_text.classList.add("hidden")
+        IBM_IMG.classList.remove("hidden")
+        IBM_text.classList.remove("hidden")
+
+    setTimeout(function() {
+        IBM_IMG.style.transition = `opacity ${duration}ms ease-in-out`;
+        IBM_IMG.style.opacity = 1;
+        IBM_text.style.transition = `opacity ${duration}ms ease-in-out`;
+        IBM_text.style.opacity = 1;
+        }, 800); 
+    }, 700); 
+}, 20);} 
+    if (!IBM_IMG.classList.contains('hidden')) {
+        UDB_IMG.style.transform = `translateX(0px)`;
+        setTimeout(function() {
+        IBM_IMG.style.transition = `transform ${duration}ms ease-in-out`;
+        IBM_IMG.style.transform = `translateX(400px)`;
+        IBM_text.style.transition = `opacity ${duration-400}ms ease-in-out`;
+        IBM_text.style.opacity = 0;
+        
+
+        setTimeout(function() {
+        IBM_IMG.style.opacity = 0;
+        IBM_IMG.classList.add("hidden")
+        IBM_text.classList.add("hidden")
+        UDB_IMG.classList.remove("hidden")
+        UDB_text.classList.remove("hidden")
+
+        setTimeout(function() {
+        UDB_IMG.style.transition = `opacity ${duration}ms ease-in-out`;
+        UDB_IMG.style.opacity = 1;
+        UDB_text.style.transition = `opacity ${duration}ms ease-in-out`;
+        UDB_text.style.opacity = 1;
+        
+        }, 800); 
+    }, 700);
+}, 20);} 
+
+if (!UDB_IMG.classList.contains('hidden')) {
+        Alura_IMG.style.transform = `translateX(0px)`;
+        setTimeout(function() {
+        UDB_IMG.style.transition = `transform ${duration}ms ease-in-out`;
+        UDB_IMG.style.transform = `translateX(400px)`;
+        UDB_text.style.transition = `opacity ${duration-400}ms ease-in-out`;
+        UDB_text.style.opacity = 0;
+        
+
+        setTimeout(function() {
+        UDB_IMG.style.opacity = 0;
+        UDB_IMG.classList.add("hidden")
+        UDB_text.classList.add("hidden")
+        Alura_IMG.classList.remove("hidden")
+        Alura_text.classList.remove("hidden")
+
+        setTimeout(function() {
+        Alura_IMG.style.transition = `opacity ${duration}ms ease-in-out`;
+        Alura_IMG.style.opacity = 1;
+        Alura_text.style.transition = `opacity ${duration}ms ease-in-out`;
+        Alura_text.style.opacity = 1;
+        }, 800); 
+    }, 700); 
+}, 20);} 
+    
+
+}
+function temamarce() {
+    console.log("funciontema")
+    const elementos = document.querySelectorAll('.text-color1 , .text-color2, .bg-color1, .bg-color2, .border-color1, .border-color2 ');
+    elementos.forEach((elemento) => {
+    elemento.classList.replace('text-color1', 'text-color9');
+    elemento.classList.replace('text-color2', 'text-color8');
+    elemento.classList.replace('bg-color1', 'bg-color9');
+    elemento.classList.replace('bg-color2', 'bg-color8');
+    elemento.classList.replace('border-color1', 'border-color9');
+    elemento.classList.replace('border-color2', 'border-color8');
+    elemento.classList.replace('hover:bg-color1', 'hover:bg-color9');
+    });
+    
+}
+
+</script>
+</body>
+</html>
