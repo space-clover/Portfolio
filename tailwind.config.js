@@ -35,15 +35,6 @@ module.exports = {
         return vwValues;
       })(),
       colors: {
-        color1: '#F4E8D8', /* paleta de colores tema principal */ 
-        color2: '#7b0000',
-        color3: '#F7D2C2', /* paleta de colores tema 2 */ 
-        color4: '#00000080',
-        color5: '#F25C05',
-        color6: '#F2EBDF',
-        color7: '#254602', 
-        color8: '#013c35', /* paleta de colores tema 3 */
-        color9: '#b2f0e8', /* paleta de colores tema 3 */
         orange: {
           '50': '#fff5e5',
           '100': '#ffe9cc',
